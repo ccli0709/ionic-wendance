@@ -5,12 +5,12 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card li *ngFor="let item of items">
+  <ion-card li *ngFor="let item of items | async">
     <ion-card-header>
-      {{item.day}}<code>{{item.id}}</code>
+{{ item.publishDate }}
     </ion-card-header>
     <ion-card-content>
-      {{item.content}}
+{{ item.title }}
     </ion-card-content>
   </ion-card>
 </ion-content>
